@@ -1,4 +1,6 @@
 # README
+guide reference:
+https://www.sitepoint.com/full-text-search-rails-elasticsearch/
 
 after adding
   include Elasticsearch::Model
@@ -7,11 +9,11 @@ after adding
 
 $ rails console
 
-# Create the index for Service model on elasticsearch
+# Create the index for Article model on elasticsearch
 > Article.__elasticsearch__.create_index!
 => {"acknowledged"=>true}
 
-# Import current Service records into the index
+# Import current Article records into the index
 > Article.import
 
 # Sample search returning total results
